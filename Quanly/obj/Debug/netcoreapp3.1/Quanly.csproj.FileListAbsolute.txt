@@ -1,0 +1,16 @@
+C:\Users\Administrator\Desktop\Quanly\Quanly\bin\Debug\netcoreapp3.1\Quanly.exe
+C:\Users\Administrator\Desktop\Quanly\Quanly\bin\Debug\netcoreapp3.1\Quanly.deps.json
+C:\Users\Administrator\Desktop\Quanly\Quanly\bin\Debug\netcoreapp3.1\Quanly.runtimeconfig.json
+C:\Users\Administrator\Desktop\Quanly\Quanly\bin\Debug\netcoreapp3.1\Quanly.runtimeconfig.dev.json
+C:\Users\Administrator\Desktop\Quanly\Quanly\bin\Debug\netcoreapp3.1\Quanly.dll
+C:\Users\Administrator\Desktop\Quanly\Quanly\bin\Debug\netcoreapp3.1\Quanly.pdb
+C:\Users\Administrator\Desktop\Quanly\Quanly\obj\Debug\netcoreapp3.1\Quanly.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\Quanly\Quanly\obj\Debug\netcoreapp3.1\Quanly.Form1.resources
+C:\Users\Administrator\Desktop\Quanly\Quanly\obj\Debug\netcoreapp3.1\Quanly.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\Quanly\Quanly\obj\Debug\netcoreapp3.1\Quanly.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\Quanly\Quanly\obj\Debug\netcoreapp3.1\Quanly.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Quanly\Quanly\obj\Debug\netcoreapp3.1\Quanly.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Quanly\Quanly\obj\Debug\netcoreapp3.1\Quanly.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Quanly\Quanly\obj\Debug\netcoreapp3.1\Quanly.dll
+C:\Users\Administrator\Desktop\Quanly\Quanly\obj\Debug\netcoreapp3.1\Quanly.pdb
+C:\Users\Administrator\Desktop\Quanly\Quanly\obj\Debug\netcoreapp3.1\Quanly.genruntimeconfig.cache
