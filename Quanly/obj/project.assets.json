@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Quanly\\Quanly\\Quanly.csproj",
-      "projectName": "Quanly",
-      "projectPath": "C:\\Users\\Administrator\\Desktop\\Quanly\\Quanly\\Quanly.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Quanly\\Quanly\\ManageStudent.csproj",
+      "projectName": "ManageStudent",
+      "projectPath": "C:\\Users\\Administrator\\Desktop\\Quanly\\Quanly\\ManageStudent.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Administrator\\Desktop\\Quanly\\Quanly\\obj\\",
       "projectStyle": "PackageReference",

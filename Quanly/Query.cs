@@ -1,35 +1,36 @@
-﻿using System;
+﻿using Quanly;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 
-namespace Quanly
+namespace ManageStudent
 {
     [Serializable]
-    class TruyVanSinhVien
+    class Query
     {
-        private static TruyVanSinhVien instance = null;
-        private List<SinhVien> dssv;
-        public List<SinhVien> getDSSV()
+        private static Query instance = null;
+        private List<Student> lstudent;
+        public List<Student> getStudent()
         {
-            return dssv;
+            return lstudent;
         }
-        public TruyVanSinhVien()
+        public Query()
         {
-            dssv = new List<SinhVien>();
+            lstudent = new List<Student>();
         }
-        public static TruyVanSinhVien khoitao()
+        public static Query init()
         {
             if (instance == null)
-                instance = new TruyVanSinhVien();
+                instance = new Query();
             return instance;
         }
-        public static bool ghiFile(string tenFile)
+        public static bool writeFile(string folderName)
         {
             try
             {
-                FileStream fs = new FileStream(tenFile, FileMode.Create);
+                FileStream fs = new FileStream(folderName, FileMode.Create);
                 BinaryFormatter bf = new BinaryFormatter();
                 bf.Serialize(fs, instance);
                 fs.Close();
@@ -40,13 +41,13 @@ namespace Quanly
                 return false;
             }
         }
-        public static bool docFile(string tenFile)
+        public static bool readFile(string folderName)
         {
             try
             {
-                FileStream fs = new FileStream(tenFile, FileMode.Open);
+                FileStream fs = new FileStream(folderName, FileMode.Open);
                 BinaryFormatter bf = new BinaryFormatter();
-                instance = (TruyVanSinhVien)bf.Deserialize(fs);
+                instance = (Query)bf.Deserialize(fs);
                 fs.Close();
                 return true;
             }

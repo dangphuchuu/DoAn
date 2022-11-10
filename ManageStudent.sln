@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32901.82
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quanly", "Quanly\Quanly.csproj", "{1E4FC6AD-9181-4EA5-A3D7-1A63B48EC61D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManageStudent", "Quanly\ManageStudent.csproj", "{1E4FC6AD-9181-4EA5-A3D7-1A63B48EC61D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
