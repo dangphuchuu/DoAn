@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\Desktop\\Quanly\\Quanly\\ManageStudent.csproj": {}
+    "D:\\DoAn\\Quanly\\ManageStudent.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\Desktop\\Quanly\\Quanly\\ManageStudent.csproj": {
+    "D:\\DoAn\\Quanly\\ManageStudent.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Quanly\\Quanly\\ManageStudent.csproj",
+        "projectUniqueName": "D:\\DoAn\\Quanly\\ManageStudent.csproj",
         "projectName": "ManageStudent",
-        "projectPath": "C:\\Users\\Administrator\\Desktop\\Quanly\\Quanly\\ManageStudent.csproj",
+        "projectPath": "D:\\DoAn\\Quanly\\ManageStudent.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\Desktop\\Quanly\\Quanly\\obj\\",
+        "outputPath": "D:\\DoAn\\Quanly\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
