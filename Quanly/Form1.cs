@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManageStudent;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,50 +15,50 @@ namespace Quanly
 {
     public partial class Form1 : Form
     {
-        private XuLySinhVien xuly;
+        private Processing process;
 
         public Form1()
         {
             InitializeComponent();
-            xuly = new XuLySinhVien();
+            process = new Processing();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            TruyVanSinhVien.docFile("sinhvien.dat");
-            xuly = new XuLySinhVien();
-            radnam.Checked = true;
-            hienThiDSSV();
+            Query.readFile("Student.dat");
+            process = new Processing();
+            radmale.Checked = true;
+            showStudent();
         }
         public bool check()//kiểm tra người dùng đã nhập thông tin chưa
         {
-            if (string.IsNullOrWhiteSpace(txtmasv.Text))
+            if (string.IsNullOrWhiteSpace(txtcode.Text))
             {
                 MessageBox.Show("Chưa nhập mã sinh viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtmasv.Focus();//con trỏ trỏ đến nơi chưa nhập
+                txtcode.Focus();//con trỏ trỏ đến nơi chưa nhập
                 return false;
             }
-            if (string.IsNullOrWhiteSpace(txtten.Text))
+            if (string.IsNullOrWhiteSpace(txtfirst.Text))
             {
                 MessageBox.Show("Chưa nhập họ sinh viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtten.Focus();
+                txtfirst.Focus();
                 return false;
             }
-            if (string.IsNullOrWhiteSpace(txtho.Text))
+            if (string.IsNullOrWhiteSpace(txtlast.Text))
             {
                 MessageBox.Show("Chưa nhập tên sinh viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtho.Focus();
+                txtlast.Focus();
                 return false;
             }
-            if (string.IsNullOrWhiteSpace(txtlop.Text))
+            if (string.IsNullOrWhiteSpace(txtclass.Text))
             {
                 MessageBox.Show("Chưa nhập tên sinh viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtlop.Focus();
+                txtclass.Focus();
                 return false;
             }
-            if (string.IsNullOrWhiteSpace(txtdiachi.Text))
+            if (string.IsNullOrWhiteSpace(txtaddress.Text))
             {
                 MessageBox.Show("Chưa nhập địa chỉ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtdiachi.Focus();
+                txtaddress.Focus();
                 return false;
             }
             return true;
@@ -73,15 +74,15 @@ namespace Quanly
         {
             if (check())
             {
-                SinhVien n = new SinhVien();
-                n.MSSV = txtmasv.Text;
-                n.Ho = txtho.Text;
-                n.Ten = txtten.Text;
-                n.Lop = txtlop.Text;
-                n.NgaySinh = dtpngaysinh.Value;
-                n.DiaChi = txtdiachi.Text;
+                Student n = new Student();
+                n.Code = txtcode.Text;
+                n.Last = txtlast.Text;
+                n.First = txtfirst.Text;
+                n.Class = txtclass.Text;
+                n.BirthDay = dtpbirthday.Value;
+                n.Address = txtaddress.Text;
                 string gen = "Nam";
-                if (radnam.Checked == true)
+                if (radmale.Checked == true)
                 {
                     gen = "Nam";
                 }
@@ -89,15 +90,15 @@ namespace Quanly
                 {
                     gen = "Nữ";
                 }
-                n.GioiTinh = gen;
-                xuly.them(n);
-                hienThiDSSV();
+                n.Gen = gen;
+                process.addStudent(n);
+                showStudent();
             }
 
         }
-        public void hienThiDSSV()
+        public void showStudent()
         {
-            dataGridView1.DataSource = xuly.getDSSV();
+            dataGridView1.DataSource = process.getStudent();
             dataGridView1.Refresh();
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -108,8 +109,8 @@ namespace Quanly
 
         private void btnluu_Click(object sender, EventArgs e)
         {
-            bool kq = TruyVanSinhVien.ghiFile("sinhvien.dat");
-            if(kq == true)
+            bool result = Query.writeFile("Student.dat");
+            if(result == true)
             {
                 MessageBox.Show("Lưu file thành công");
             }
@@ -121,49 +122,49 @@ namespace Quanly
 
         private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            txtmasv.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtho.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtten.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtlop.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            dtpngaysinh.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
+            txtcode.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtlast.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtfirst.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtclass.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            dtpbirthday.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
             if(dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString() == "Nam")
             {
-                radnam.Checked = true;
+                radmale.Checked = true;
             }
             else
             {
-                radnu.Checked = true;
+                radfemale.Checked = true;
             }
-            txtdiachi.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txtaddress.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
         
         private void btnsua_Click(object sender, EventArgs e)
         {
-            SinhVien n = new SinhVien();
-            n.MSSV = txtmasv.Text;
-            n.Ho = txtho.Text;
-            n.Ten = txtten.Text;
-            n.Lop = txtlop.Text;
-            n.NgaySinh = dtpngaysinh.Value;
-            n.DiaChi = txtdiachi.Text;
-            n.GioiTinh = "Nam";
-            if(radnu.Checked == true)
+            Student n = new Student();
+            n.Code = txtcode.Text;
+            n.Last = txtlast.Text;
+            n.First = txtfirst.Text;
+            n.Class = txtclass.Text;
+            n.BirthDay = dtpbirthday.Value;
+            n.Address = txtaddress.Text;
+            n.Gen = "Nam";
+            if(radfemale.Checked == true)
             {
-                n.GioiTinh = "Nữ";
+                n.Gen = "Nữ";
             }
-            xuly.sua(n);
-            hienThiDSSV();
+            process.editStudent(n);
+            showStudent();
         }
 
         private void btnxoa_Click(object sender, EventArgs e)
         {
-            string ma = txtmasv.Text;
+            string code = txtcode.Text;
             if(MessageBox.Show("Bạn muốn xóa ?","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question)== DialogResult.Yes)
             {
-                xuly.xoa(ma);
+               process.deleteStudent(code);
                 MessageBox.Show("Xóa thành công");
             }
-            hienThiDSSV();
+            showStudent();
         }
     }
 }
