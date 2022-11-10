@@ -109,8 +109,8 @@ namespace Quanly
 
         private void btnluu_Click(object sender, EventArgs e)
         {
-            bool kq = Query.writeFile("Student.dat");
-            if(kq == true)
+            bool result = Query.writeFile("Student.dat");
+            if(result == true)
             {
                 MessageBox.Show("Lưu file thành công");
             }
@@ -158,10 +158,10 @@ namespace Quanly
 
         private void btnxoa_Click(object sender, EventArgs e)
         {
-            string ma = txtcode.Text;
+            string code = txtcode.Text;
             if(MessageBox.Show("Bạn muốn xóa ?","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question)== DialogResult.Yes)
             {
-               process.deleteStudent(ma);
+               process.deleteStudent(code);
                 MessageBox.Show("Xóa thành công");
             }
             showStudent();
