@@ -29,7 +29,6 @@ namespace Quanly
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,13 +43,6 @@ namespace Quanly
             this.radmale = new System.Windows.Forms.RadioButton();
             this.radfemale = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnadd = new System.Windows.Forms.Button();
-            this.btnedit = new System.Windows.Forms.Button();
-            this.btndelete = new System.Windows.Forms.Button();
-            this.btnexit = new System.Windows.Forms.Button();
-            this.btnsave = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtclass = new System.Windows.Forms.TextBox();
             this.mssv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,19 +50,15 @@ namespace Quanly
             this.ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnedit = new System.Windows.Forms.Button();
+            this.btndelete = new System.Windows.Forms.Button();
+            this.btnexit = new System.Windows.Forms.Button();
+            this.btnsave = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtclass = new System.Windows.Forms.TextBox();
+            this.btnadd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(280, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(357, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Quản Lý Thông Tin Sinh Viên";
             // 
             // label2
             // 
@@ -210,15 +198,52 @@ namespace Quanly
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
-            // btnadd
+            // mssv
             // 
-            this.btnadd.Location = new System.Drawing.Point(710, 56);
-            this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(75, 23);
-            this.btnadd.TabIndex = 14;
-            this.btnadd.Text = "Thêm";
-            this.btnadd.UseVisualStyleBackColor = true;
-            this.btnadd.Click += new System.EventHandler(this.btnthem_Click);
+            this.mssv.DataPropertyName = "Code";
+            this.mssv.HeaderText = "Mã Sinh Viên";
+            this.mssv.Name = "mssv";
+            this.mssv.Width = 150;
+            // 
+            // ho
+            // 
+            this.ho.DataPropertyName = "Last";
+            this.ho.HeaderText = "Họ Sinh Viên";
+            this.ho.Name = "ho";
+            this.ho.Width = 130;
+            // 
+            // ten
+            // 
+            this.ten.DataPropertyName = "First";
+            this.ten.HeaderText = "Tên Sinh Viên";
+            this.ten.Name = "ten";
+            this.ten.Width = 130;
+            // 
+            // lop
+            // 
+            this.lop.DataPropertyName = "Class";
+            this.lop.HeaderText = "Lớp";
+            this.lop.Name = "lop";
+            // 
+            // ngaysinh
+            // 
+            this.ngaysinh.DataPropertyName = "BirthDay";
+            this.ngaysinh.HeaderText = "Ngày Sinh";
+            this.ngaysinh.Name = "ngaysinh";
+            this.ngaysinh.Width = 130;
+            // 
+            // gioitinh
+            // 
+            this.gioitinh.DataPropertyName = "Gen";
+            this.gioitinh.HeaderText = "Giới Tính";
+            this.gioitinh.Name = "gioitinh";
+            // 
+            // diachi
+            // 
+            this.diachi.DataPropertyName = "Address";
+            this.diachi.HeaderText = "Địa Chỉ";
+            this.diachi.Name = "diachi";
+            this.diachi.Width = 250;
             // 
             // btnedit
             // 
@@ -277,52 +302,15 @@ namespace Quanly
             this.txtclass.Size = new System.Drawing.Size(200, 23);
             this.txtclass.TabIndex = 9;
             // 
-            // mssv
+            // btnadd
             // 
-            this.mssv.DataPropertyName = "Code";
-            this.mssv.HeaderText = "Mã Sinh Viên";
-            this.mssv.Name = "mssv";
-            this.mssv.Width = 150;
-            // 
-            // ho
-            // 
-            this.ho.DataPropertyName = "Last";
-            this.ho.HeaderText = "Họ Sinh Viên";
-            this.ho.Name = "ho";
-            this.ho.Width = 130;
-            // 
-            // ten
-            // 
-            this.ten.DataPropertyName = "First";
-            this.ten.HeaderText = "Tên Sinh Viên";
-            this.ten.Name = "ten";
-            this.ten.Width = 130;
-            // 
-            // lop
-            // 
-            this.lop.DataPropertyName = "Class";
-            this.lop.HeaderText = "Lớp";
-            this.lop.Name = "lop";
-            // 
-            // ngaysinh
-            // 
-            this.ngaysinh.DataPropertyName = "BirthDay";
-            this.ngaysinh.HeaderText = "Ngày Sinh";
-            this.ngaysinh.Name = "ngaysinh";
-            this.ngaysinh.Width = 130;
-            // 
-            // gioitinh
-            // 
-            this.gioitinh.DataPropertyName = "Gen";
-            this.gioitinh.HeaderText = "Giới Tính";
-            this.gioitinh.Name = "gioitinh";
-            // 
-            // diachi
-            // 
-            this.diachi.DataPropertyName = "Address";
-            this.diachi.HeaderText = "Địa Chỉ";
-            this.diachi.Name = "diachi";
-            this.diachi.Width = 250;
+            this.btnadd.Location = new System.Drawing.Point(710, 56);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(75, 23);
+            this.btnadd.TabIndex = 14;
+            this.btnadd.Text = "Thêm";
+            this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.btnthem_Click);
             // 
             // Form1
             // 
@@ -350,7 +338,6 @@ namespace Quanly
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -361,8 +348,6 @@ namespace Quanly
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -377,7 +362,6 @@ namespace Quanly
         private System.Windows.Forms.RadioButton radmale;
         private System.Windows.Forms.RadioButton radfemale;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.Button btnedit;
         private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.Button btnexit;
@@ -391,6 +375,7 @@ namespace Quanly
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaysinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
+        private System.Windows.Forms.Button btnadd;
     }
 }
 
