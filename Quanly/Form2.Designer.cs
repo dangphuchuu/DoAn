@@ -37,9 +37,8 @@ namespace ManageStudent
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnfindclass = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnaddstudent = new System.Windows.Forms.Button();
             this.btnexit = new System.Windows.Forms.Button();
-            this.btndelete = new System.Windows.Forms.Button();
+            this.btnaddstudent = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.mssv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ho = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -117,7 +116,6 @@ namespace ManageStudent
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btndelete);
             this.groupBox1.Controls.Add(this.btnexit);
             this.groupBox1.Controls.Add(this.btnaddstudent);
             this.groupBox1.Location = new System.Drawing.Point(870, 45);
@@ -125,6 +123,16 @@ namespace ManageStudent
             this.groupBox1.Size = new System.Drawing.Size(131, 116);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
+            // 
+            // btnexit
+            // 
+            this.btnexit.Location = new System.Drawing.Point(14, 48);
+            this.btnexit.Name = "btnexit";
+            this.btnexit.Size = new System.Drawing.Size(111, 23);
+            this.btnexit.TabIndex = 18;
+            this.btnexit.Text = "Thoát";
+            this.btnexit.UseVisualStyleBackColor = true;
+            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
             // 
             // btnaddstudent
             // 
@@ -134,27 +142,11 @@ namespace ManageStudent
             this.btnaddstudent.TabIndex = 0;
             this.btnaddstudent.Text = "Thao tác";
             this.btnaddstudent.UseVisualStyleBackColor = true;
-            // 
-            // btnexit
-            // 
-            this.btnexit.Location = new System.Drawing.Point(14, 87);
-            this.btnexit.Name = "btnexit";
-            this.btnexit.Size = new System.Drawing.Size(111, 23);
-            this.btnexit.TabIndex = 18;
-            this.btnexit.Text = "Thoát";
-            this.btnexit.UseVisualStyleBackColor = true;
-            // 
-            // btndelete
-            // 
-            this.btndelete.Location = new System.Drawing.Point(14, 51);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(111, 23);
-            this.btndelete.TabIndex = 17;
-            this.btndelete.Text = "Xóa";
-            this.btndelete.UseVisualStyleBackColor = true;
+            this.btnaddstudent.Click += new System.EventHandler(this.btnaddstudent_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.mssv,
@@ -164,11 +156,13 @@ namespace ManageStudent
             this.ngaysinh,
             this.gioitinh,
             this.diachi});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 192);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 167);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1024, 360);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1025, 385);
             this.dataGridView1.TabIndex = 20;
+            this.dataGridView1.Click += new System.EventHandler(this.Form2_click);
             // 
             // mssv
             // 
@@ -253,8 +247,6 @@ namespace ManageStudent
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnaddstudent;
         private System.Windows.Forms.Button btnexit;
-        private System.Windows.Forms.Button btndelete;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn mssv;
         private System.Windows.Forms.DataGridViewTextBoxColumn ho;
         private System.Windows.Forms.DataGridViewTextBoxColumn ten;
@@ -262,5 +254,6 @@ namespace ManageStudent
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaysinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

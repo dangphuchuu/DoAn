@@ -42,14 +42,6 @@ namespace Quanly
             this.label7 = new System.Windows.Forms.Label();
             this.radmale = new System.Windows.Forms.RadioButton();
             this.radfemale = new System.Windows.Forms.RadioButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mssv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnedit = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
             this.btnexit = new System.Windows.Forms.Button();
@@ -57,7 +49,6 @@ namespace Quanly
             this.label8 = new System.Windows.Forms.Label();
             this.txtclass = new System.Windows.Forms.TextBox();
             this.btnadd = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -163,7 +154,6 @@ namespace Quanly
             this.radmale.Name = "radmale";
             this.radmale.Size = new System.Drawing.Size(62, 25);
             this.radmale.TabIndex = 12;
-            this.radmale.TabStop = true;
             this.radmale.Text = "Nam";
             this.radmale.UseVisualStyleBackColor = true;
             // 
@@ -175,75 +165,8 @@ namespace Quanly
             this.radfemale.Name = "radfemale";
             this.radfemale.Size = new System.Drawing.Size(49, 25);
             this.radfemale.TabIndex = 13;
-            this.radfemale.TabStop = true;
             this.radfemale.Text = "Nữ";
             this.radfemale.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.mssv,
-            this.ho,
-            this.ten,
-            this.lop,
-            this.ngaysinh,
-            this.gioitinh,
-            this.diachi});
-            this.dataGridView1.Location = new System.Drawing.Point(-2, 262);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(978, 360);
-            this.dataGridView1.TabIndex = 19;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
-            this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
-            // 
-            // mssv
-            // 
-            this.mssv.DataPropertyName = "Code";
-            this.mssv.HeaderText = "Mã Sinh Viên";
-            this.mssv.Name = "mssv";
-            this.mssv.Width = 150;
-            // 
-            // ho
-            // 
-            this.ho.DataPropertyName = "Last";
-            this.ho.HeaderText = "Họ Sinh Viên";
-            this.ho.Name = "ho";
-            this.ho.Width = 130;
-            // 
-            // ten
-            // 
-            this.ten.DataPropertyName = "First";
-            this.ten.HeaderText = "Tên Sinh Viên";
-            this.ten.Name = "ten";
-            this.ten.Width = 130;
-            // 
-            // lop
-            // 
-            this.lop.DataPropertyName = "Class";
-            this.lop.HeaderText = "Lớp";
-            this.lop.Name = "lop";
-            // 
-            // ngaysinh
-            // 
-            this.ngaysinh.DataPropertyName = "BirthDay";
-            this.ngaysinh.HeaderText = "Ngày Sinh";
-            this.ngaysinh.Name = "ngaysinh";
-            this.ngaysinh.Width = 130;
-            // 
-            // gioitinh
-            // 
-            this.gioitinh.DataPropertyName = "Gen";
-            this.gioitinh.HeaderText = "Giới Tính";
-            this.gioitinh.Name = "gioitinh";
-            // 
-            // diachi
-            // 
-            this.diachi.DataPropertyName = "Address";
-            this.diachi.HeaderText = "Địa Chỉ";
-            this.diachi.Name = "diachi";
-            this.diachi.Width = 250;
             // 
             // btnedit
             // 
@@ -271,7 +194,7 @@ namespace Quanly
             this.btnexit.Name = "btnexit";
             this.btnexit.Size = new System.Drawing.Size(75, 23);
             this.btnexit.TabIndex = 17;
-            this.btnexit.Text = "Thoát";
+            this.btnexit.Text = "Quay về ";
             this.btnexit.UseVisualStyleBackColor = true;
             this.btnexit.Click += new System.EventHandler(this.btnthoat_Click);
             // 
@@ -316,7 +239,7 @@ namespace Quanly
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 616);
+            this.ClientSize = new System.Drawing.Size(984, 285);
             this.Controls.Add(this.txtclass);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnsave);
@@ -324,7 +247,6 @@ namespace Quanly
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.btnedit);
             this.Controls.Add(this.btnadd);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.radfemale);
             this.Controls.Add(this.radmale);
             this.Controls.Add(this.label7);
@@ -341,7 +263,6 @@ namespace Quanly
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,29 +274,21 @@ namespace Quanly
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtcode;
-        private System.Windows.Forms.TextBox txtlast;
-        private System.Windows.Forms.TextBox txtfirst;
-        private System.Windows.Forms.TextBox txtaddress;
-        private System.Windows.Forms.DateTimePicker dtpbirthday;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton radmale;
-        private System.Windows.Forms.RadioButton radfemale;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnedit;
         private System.Windows.Forms.Button btndelete;
         private System.Windows.Forms.Button btnexit;
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtclass;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mssv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ho;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ten;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaysinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diachi;
         private System.Windows.Forms.Button btnadd;
+        public System.Windows.Forms.TextBox txtcode;
+        public System.Windows.Forms.TextBox txtlast;
+        public System.Windows.Forms.TextBox txtfirst;
+        public System.Windows.Forms.TextBox txtaddress;
+        public System.Windows.Forms.DateTimePicker dtpbirthday;
+        public System.Windows.Forms.RadioButton radmale;
+        public System.Windows.Forms.RadioButton radfemale;
+        public System.Windows.Forms.TextBox txtclass;
     }
 }
 

@@ -50,7 +50,6 @@ namespace ManageStudent
         }
         public void addStudent(Student s)
         {
-
             if (findStudent(s.Code) == null)
             {
                 this.lstudent.Add(s);

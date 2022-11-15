@@ -15,19 +15,20 @@ namespace Quanly
 {
     public partial class Form1 : Form
     {
+        public BindingSource form1bs;
         private Processing process;
 
-        public Form1()
+        public Form1(BindingSource bs)
         {
+            
             InitializeComponent();
+            form1bs = bs;
             process = new Processing();
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            Query.readFile("Student.dat");
-            process = new Processing();
-            radmale.Checked = true;
-            showStudent();
+          
         }
         public bool check()//kiểm tra người dùng đã nhập thông tin chưa
         {
@@ -67,7 +68,7 @@ namespace Quanly
 
         private void btnthoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Dispose();
         }
 
         private void btnthem_Click(object sender, EventArgs e)
@@ -92,15 +93,11 @@ namespace Quanly
                 }
                 n.Gen = gen;
                 process.addStudent(n);
-                showStudent();
+                form1bs.Add(n);
             }
 
         }
-        public void showStudent()
-        {
-            dataGridView1.DataSource = process.getStudent();
-            dataGridView1.Refresh();
-        }
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -122,24 +119,12 @@ namespace Quanly
 
         private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            txtcode.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtlast.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtfirst.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtclass.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            dtpbirthday.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[4].Value);
-            if(dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString() == "Nam")
-            {
-                radmale.Checked = true;
-            }
-            else
-            {
-                radfemale.Checked = true;
-            }
-            txtaddress.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+           
         }
         
         private void btnsua_Click(object sender, EventArgs e)
         {
+            
             Student n = new Student();
             n.Code = txtcode.Text;
             n.Last = txtlast.Text;
@@ -153,7 +138,7 @@ namespace Quanly
                 n.Gen = "Nữ";
             }
             process.editStudent(n);
-            showStudent();
+
         }
 
         private void btnxoa_Click(object sender, EventArgs e)
@@ -162,9 +147,11 @@ namespace Quanly
             if(MessageBox.Show("Bạn muốn xóa ?","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Question)== DialogResult.Yes)
             {
                process.deleteStudent(code);
+                form1bs.RemoveCurrent();
                 MessageBox.Show("Xóa thành công");
+                this.Close();
             }
-            showStudent();
         }
+       
     }
 }
