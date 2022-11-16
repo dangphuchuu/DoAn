@@ -55,7 +55,7 @@ namespace Quanly
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(31, 62);
+            this.label2.Location = new System.Drawing.Point(30, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 20);
             this.label2.TabIndex = 1;
@@ -65,7 +65,7 @@ namespace Quanly
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(32, 92);
+            this.label3.Location = new System.Drawing.Point(31, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 20);
             this.label3.TabIndex = 2;
@@ -75,7 +75,7 @@ namespace Quanly
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(32, 127);
+            this.label4.Location = new System.Drawing.Point(31, 91);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 20);
             this.label4.TabIndex = 3;
@@ -85,7 +85,7 @@ namespace Quanly
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(32, 187);
+            this.label5.Location = new System.Drawing.Point(31, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 20);
             this.label5.TabIndex = 4;
@@ -95,7 +95,7 @@ namespace Quanly
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(32, 222);
+            this.label6.Location = new System.Drawing.Point(31, 186);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 20);
             this.label6.TabIndex = 5;
@@ -103,35 +103,35 @@ namespace Quanly
             // 
             // txtcode
             // 
-            this.txtcode.Location = new System.Drawing.Point(132, 59);
+            this.txtcode.Location = new System.Drawing.Point(131, 23);
             this.txtcode.Name = "txtcode";
             this.txtcode.Size = new System.Drawing.Size(200, 23);
             this.txtcode.TabIndex = 6;
             // 
             // txtlast
             // 
-            this.txtlast.Location = new System.Drawing.Point(132, 89);
+            this.txtlast.Location = new System.Drawing.Point(131, 53);
             this.txtlast.Name = "txtlast";
             this.txtlast.Size = new System.Drawing.Size(200, 23);
             this.txtlast.TabIndex = 7;
             // 
             // txtfirst
             // 
-            this.txtfirst.Location = new System.Drawing.Point(132, 124);
+            this.txtfirst.Location = new System.Drawing.Point(131, 88);
             this.txtfirst.Name = "txtfirst";
             this.txtfirst.Size = new System.Drawing.Size(200, 23);
             this.txtfirst.TabIndex = 8;
             // 
             // txtaddress
             // 
-            this.txtaddress.Location = new System.Drawing.Point(130, 223);
+            this.txtaddress.Location = new System.Drawing.Point(129, 187);
             this.txtaddress.Name = "txtaddress";
             this.txtaddress.Size = new System.Drawing.Size(392, 23);
             this.txtaddress.TabIndex = 11;
             // 
             // dtpbirthday
             // 
-            this.dtpbirthday.Location = new System.Drawing.Point(130, 187);
+            this.dtpbirthday.Location = new System.Drawing.Point(129, 151);
             this.dtpbirthday.Name = "dtpbirthday";
             this.dtpbirthday.Size = new System.Drawing.Size(200, 23);
             this.dtpbirthday.TabIndex = 10;
@@ -140,7 +140,7 @@ namespace Quanly
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(547, 59);
+            this.label7.Location = new System.Drawing.Point(546, 23);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(68, 20);
             this.label7.TabIndex = 11;
@@ -150,7 +150,7 @@ namespace Quanly
             // 
             this.radmale.AutoSize = true;
             this.radmale.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radmale.Location = new System.Drawing.Point(500, 92);
+            this.radmale.Location = new System.Drawing.Point(499, 56);
             this.radmale.Name = "radmale";
             this.radmale.Size = new System.Drawing.Size(62, 25);
             this.radmale.TabIndex = 12;
@@ -161,7 +161,7 @@ namespace Quanly
             // 
             this.radfemale.AutoSize = true;
             this.radfemale.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radfemale.Location = new System.Drawing.Point(611, 92);
+            this.radfemale.Location = new System.Drawing.Point(610, 56);
             this.radfemale.Name = "radfemale";
             this.radfemale.Size = new System.Drawing.Size(49, 25);
             this.radfemale.TabIndex = 13;
@@ -170,7 +170,7 @@ namespace Quanly
             // 
             // btnedit
             // 
-            this.btnedit.Location = new System.Drawing.Point(817, 56);
+            this.btnedit.Location = new System.Drawing.Point(709, 53);
             this.btnedit.Name = "btnedit";
             this.btnedit.Size = new System.Drawing.Size(75, 23);
             this.btnedit.TabIndex = 15;
@@ -180,7 +180,7 @@ namespace Quanly
             // 
             // btndelete
             // 
-            this.btndelete.Location = new System.Drawing.Point(710, 95);
+            this.btndelete.Location = new System.Drawing.Point(709, 91);
             this.btndelete.Name = "btndelete";
             this.btndelete.Size = new System.Drawing.Size(75, 23);
             this.btndelete.TabIndex = 16;
@@ -190,7 +190,7 @@ namespace Quanly
             // 
             // btnexit
             // 
-            this.btnexit.Location = new System.Drawing.Point(817, 95);
+            this.btnexit.Location = new System.Drawing.Point(709, 132);
             this.btnexit.Name = "btnexit";
             this.btnexit.Size = new System.Drawing.Size(75, 23);
             this.btnexit.TabIndex = 17;
@@ -200,7 +200,7 @@ namespace Quanly
             // 
             // btnsave
             // 
-            this.btnsave.Location = new System.Drawing.Point(901, 233);
+            this.btnsave.Location = new System.Drawing.Point(709, 187);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(75, 23);
             this.btnsave.TabIndex = 18;
@@ -212,7 +212,7 @@ namespace Quanly
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(32, 157);
+            this.label8.Location = new System.Drawing.Point(31, 121);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(34, 20);
             this.label8.TabIndex = 20;
@@ -220,14 +220,14 @@ namespace Quanly
             // 
             // txtclass
             // 
-            this.txtclass.Location = new System.Drawing.Point(132, 154);
+            this.txtclass.Location = new System.Drawing.Point(131, 118);
             this.txtclass.Name = "txtclass";
             this.txtclass.Size = new System.Drawing.Size(200, 23);
             this.txtclass.TabIndex = 9;
             // 
             // btnadd
             // 
-            this.btnadd.Location = new System.Drawing.Point(710, 56);
+            this.btnadd.Location = new System.Drawing.Point(709, 20);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(75, 23);
             this.btnadd.TabIndex = 14;
@@ -239,7 +239,7 @@ namespace Quanly
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 285);
+            this.ClientSize = new System.Drawing.Size(798, 237);
             this.Controls.Add(this.txtclass);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnsave);

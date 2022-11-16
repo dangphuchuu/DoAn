@@ -63,5 +63,20 @@ namespace ManageStudent
                 f1.radfemale.Checked = true;
             f1.Show();
         }
+
+        private void btnfindcode_Click(object sender, EventArgs e)
+        {
+            List<Student> l2 = new List<Student>();
+            String masv = txtfindcode.Text;
+            foreach (Student n in process.getStudent())
+            {
+                if (String.Compare(masv,n.Code) ==0)
+                {
+                    l2.Add(n);
+                }
+            }
+            dataGridView1.DataSource = l2;
+            dataGridView1.Refresh();
+        }
     }
 }

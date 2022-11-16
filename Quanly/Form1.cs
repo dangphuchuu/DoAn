@@ -138,6 +138,9 @@ namespace Quanly
                 n.Gen = "Nữ";
             }
             process.editStudent(n);
+            form1bs.Insert(form1bs.IndexOf(form1bs.Current), n);
+            form1bs.RemoveCurrent();
+            this.Close();
 
         }
 
