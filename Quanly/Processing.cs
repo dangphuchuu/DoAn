@@ -29,7 +29,7 @@ namespace ManageStudent
             }
             return null;
         }
-        public void editStudent(Student s)
+        public Boolean editStudent(Student s)
         {
             Student n = findStudent(s.Code);
             if (n != null)
@@ -40,23 +40,27 @@ namespace ManageStudent
                 n.BirthDay = s.BirthDay;
                 n.Address = s.Address;
                 n.Gen = s.Gen;
+                return true;
             }
             else
             {
                 MessageBox.Show("Không được sửa mã sinh viên", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
 
 
         }
-        public void addStudent(Student s)
+        public Boolean addStudent(Student s)
         {
             if (findStudent(s.Code) == null)
             {
                 this.lstudent.Add(s);
+                return true;
             }
             else
             {
                 MessageBox.Show("Mã Sinh Viên đã tồn tại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
 
 

@@ -17,18 +17,12 @@ namespace Quanly
     {
         public BindingSource form1bs;
         private Processing process;
-
         public Form1(BindingSource bs)
         {
             
             InitializeComponent();
             form1bs = bs;
             process = new Processing();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-          
         }
         public bool check()//kiểm tra người dùng đã nhập thông tin chưa
         {
@@ -64,13 +58,6 @@ namespace Quanly
             }
             return true;
         }
-
-
-        private void btnthoat_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
         private void btnthem_Click(object sender, EventArgs e)
         {
             if (check())
@@ -92,39 +79,13 @@ namespace Quanly
                     gen = "Nữ";
                 }
                 n.Gen = gen;
-                process.addStudent(n);
-                form1bs.Add(n);
+                if(process.addStudent(n))
+                    form1bs.Add(n);
             }
 
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
-        private void btnluu_Click(object sender, EventArgs e)
-        {
-            bool result = Query.writeFile("Student.dat");
-            if(result == true)
-            {
-                MessageBox.Show("Lưu file thành công");
-            }
-            else
-            {
-                MessageBox.Show("Lưu file thất bại");
-            }
-        }
-
-        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-           
-        }
-        
         private void btnsua_Click(object sender, EventArgs e)
         {
-            
             Student n = new Student();
             n.Code = txtcode.Text;
             n.Last = txtlast.Text;
@@ -137,13 +98,13 @@ namespace Quanly
             {
                 n.Gen = "Nữ";
             }
-            process.editStudent(n);
-            form1bs.Insert(form1bs.IndexOf(form1bs.Current), n);
-            form1bs.RemoveCurrent();
-            this.Close();
-
+            if(process.editStudent(n))
+            {
+                form1bs.Insert(form1bs.IndexOf(form1bs.Current), n);
+                form1bs.RemoveCurrent();
+                this.Close();
+            }
         }
-
         private void btnxoa_Click(object sender, EventArgs e)
         {
             string code = txtcode.Text;

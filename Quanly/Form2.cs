@@ -14,20 +14,16 @@ namespace ManageStudent
     public partial class Form2 : Form
     {
         private Processing process;
-        private List<Student> lstudent;
         public BindingSource bd1;
         public Form2()
         {
             InitializeComponent();
-            process = new Processing();
         }
         private void Form2_Load(object sender, EventArgs e)
         {
             Query.readFile("Student.dat");
             process = new Processing();
-            //bd1 = new BindingSource();
             showStudent();
-           
         }
         public void showStudent()
         {
@@ -36,18 +32,11 @@ namespace ManageStudent
             dataGridView1.DataSource = bd1;
             dataGridView1.Refresh();
         }
-
         private void btnaddstudent_Click(object sender, EventArgs e)
         {
             Form1 f1 = new Form1(bd1);
             f1.Show();
         }
-
-        private void btnexit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void Form2_click(object sender, EventArgs e)
         {
             Form1 f1= new Form1(bd1);
@@ -67,16 +56,33 @@ namespace ManageStudent
         private void btnfindcode_Click(object sender, EventArgs e)
         {
             List<Student> l2 = new List<Student>();
-            String masv = txtfindcode.Text;
+            String word = txtfindcode.Text;
             foreach (Student n in process.getStudent())
             {
-                if (String.Compare(masv,n.Code) ==0)
+                if (String.Compare(word,n.Code) ==0 && rdcode.Checked)
+                {
+                    l2.Add(n);
+                }
+                if(String.Compare(word,n.Class)==0 && rdclass.Checked)
                 {
                     l2.Add(n);
                 }
             }
             dataGridView1.DataSource = l2;
             dataGridView1.Refresh();
+        }
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            bool result = Query.writeFile("Student.dat");
+            if (result == true)
+            {
+                MessageBox.Show("Lưu file thành công");
+            }
+            else
+            {
+                MessageBox.Show("Lưu file thất bại");
+            }
         }
     }
 }

@@ -44,8 +44,6 @@ namespace Quanly
             this.radfemale = new System.Windows.Forms.RadioButton();
             this.btnedit = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
-            this.btnexit = new System.Windows.Forms.Button();
-            this.btnsave = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txtclass = new System.Windows.Forms.TextBox();
             this.btnadd = new System.Windows.Forms.Button();
@@ -188,26 +186,6 @@ namespace Quanly
             this.btndelete.UseVisualStyleBackColor = true;
             this.btndelete.Click += new System.EventHandler(this.btnxoa_Click);
             // 
-            // btnexit
-            // 
-            this.btnexit.Location = new System.Drawing.Point(709, 132);
-            this.btnexit.Name = "btnexit";
-            this.btnexit.Size = new System.Drawing.Size(75, 23);
-            this.btnexit.TabIndex = 17;
-            this.btnexit.Text = "Quay về ";
-            this.btnexit.UseVisualStyleBackColor = true;
-            this.btnexit.Click += new System.EventHandler(this.btnthoat_Click);
-            // 
-            // btnsave
-            // 
-            this.btnsave.Location = new System.Drawing.Point(709, 187);
-            this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(75, 23);
-            this.btnsave.TabIndex = 18;
-            this.btnsave.Text = "Lưu";
-            this.btnsave.UseVisualStyleBackColor = true;
-            this.btnsave.Click += new System.EventHandler(this.btnluu_Click);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -242,8 +220,6 @@ namespace Quanly
             this.ClientSize = new System.Drawing.Size(798, 237);
             this.Controls.Add(this.txtclass);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.btnsave);
-            this.Controls.Add(this.btnexit);
             this.Controls.Add(this.btndelete);
             this.Controls.Add(this.btnedit);
             this.Controls.Add(this.btnadd);
@@ -262,7 +238,6 @@ namespace Quanly
             this.Controls.Add(this.label2);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,8 +252,6 @@ namespace Quanly
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnedit;
         private System.Windows.Forms.Button btndelete;
-        private System.Windows.Forms.Button btnexit;
-        private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnadd;
         public System.Windows.Forms.TextBox txtcode;

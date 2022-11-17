@@ -30,7 +30,6 @@ namespace ManageStudent
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnfindcode = new System.Windows.Forms.Button();
             this.txtfindcode = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -46,6 +45,8 @@ namespace ManageStudent
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnaddstudent = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.btnsave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -60,16 +61,6 @@ namespace ManageStudent
             this.label1.Size = new System.Drawing.Size(357, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "Quản Lý Thông Tin Sinh Viên";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(211, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 21);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Tìm kiếm ";
             // 
             // btnfindcode
             // 
@@ -158,6 +149,7 @@ namespace ManageStudent
             // rdcode
             // 
             this.rdcode.AutoSize = true;
+            this.rdcode.Checked = true;
             this.rdcode.Location = new System.Drawing.Point(758, 58);
             this.rdcode.Name = "rdcode";
             this.rdcode.Size = new System.Drawing.Size(92, 19);
@@ -173,7 +165,6 @@ namespace ManageStudent
             this.rdclass.Name = "rdclass";
             this.rdclass.Size = new System.Drawing.Size(92, 19);
             this.rdclass.TabIndex = 22;
-            this.rdclass.TabStop = true;
             this.rdclass.Text = "Tìm theo lớp";
             this.rdclass.UseVisualStyleBackColor = true;
             // 
@@ -197,12 +188,32 @@ namespace ManageStudent
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnsave);
             this.groupBox1.Controls.Add(this.btnaddstudent);
+            this.groupBox1.Controls.Add(this.menuStrip2);
             this.groupBox1.Location = new System.Drawing.Point(870, 45);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(131, 116);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.Location = new System.Drawing.Point(3, 19);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(125, 24);
+            this.menuStrip2.TabIndex = 1;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // btnsave
+            // 
+            this.btnsave.Location = new System.Drawing.Point(14, 87);
+            this.btnsave.Name = "btnsave";
+            this.btnsave.Size = new System.Drawing.Size(111, 23);
+            this.btnsave.TabIndex = 19;
+            this.btnsave.Text = "Lưu";
+            this.btnsave.UseVisualStyleBackColor = true;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
             // Form2
             // 
@@ -215,7 +226,6 @@ namespace ManageStudent
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtfindcode);
             this.Controls.Add(this.btnfindcode);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -224,6 +234,7 @@ namespace ManageStudent
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,7 +243,6 @@ namespace ManageStudent
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnfindcode;
         private System.Windows.Forms.TextBox txtfindcode;
         private System.Windows.Forms.DataGridViewTextBoxColumn mssv;
@@ -248,5 +258,7 @@ namespace ManageStudent
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Button btnaddstudent;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.Button btnsave;
     }
 }
