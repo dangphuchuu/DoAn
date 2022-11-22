@@ -43,12 +43,12 @@ namespace ManageStudent
             this.rdcode = new System.Windows.Forms.RadioButton();
             this.rdclass = new System.Windows.Forms.RadioButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.btnaddstudent = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.btnsave = new System.Windows.Forms.Button();
+            this.MScontrol = new System.Windows.Forms.ToolStripMenuItem();
+            this.MSadd = new System.Windows.Forms.ToolStripMenuItem();
+            this.MSsave = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnreset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -64,7 +64,7 @@ namespace ManageStudent
             // 
             // btnfindcode
             // 
-            this.btnfindcode.Location = new System.Drawing.Point(622, 63);
+            this.btnfindcode.Location = new System.Drawing.Point(622, 56);
             this.btnfindcode.Name = "btnfindcode";
             this.btnfindcode.Size = new System.Drawing.Size(75, 23);
             this.btnfindcode.TabIndex = 4;
@@ -74,7 +74,7 @@ namespace ManageStudent
             // 
             // txtfindcode
             // 
-            this.txtfindcode.Location = new System.Drawing.Point(313, 64);
+            this.txtfindcode.Location = new System.Drawing.Point(323, 70);
             this.txtfindcode.Name = "txtfindcode";
             this.txtfindcode.Size = new System.Drawing.Size(283, 23);
             this.txtfindcode.TabIndex = 5;
@@ -170,60 +170,56 @@ namespace ManageStudent
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MScontrol});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1025, 24);
             this.menuStrip1.TabIndex = 23;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // btnaddstudent
+            // MScontrol
             // 
-            this.btnaddstudent.Location = new System.Drawing.Point(14, 19);
-            this.btnaddstudent.Name = "btnaddstudent";
-            this.btnaddstudent.Size = new System.Drawing.Size(111, 23);
-            this.btnaddstudent.TabIndex = 0;
-            this.btnaddstudent.Text = "Thao tác";
-            this.btnaddstudent.UseVisualStyleBackColor = true;
-            this.btnaddstudent.Click += new System.EventHandler(this.btnaddstudent_Click);
+            this.MScontrol.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MSadd,
+            this.MSsave});
+            this.MScontrol.Name = "MScontrol";
+            this.MScontrol.Size = new System.Drawing.Size(79, 20);
+            this.MScontrol.Text = "Chức Năng";
             // 
-            // groupBox1
+            // MSadd
             // 
-            this.groupBox1.Controls.Add(this.btnsave);
-            this.groupBox1.Controls.Add(this.btnaddstudent);
-            this.groupBox1.Controls.Add(this.menuStrip2);
-            this.groupBox1.Location = new System.Drawing.Point(870, 45);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(131, 116);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
+            this.MSadd.Name = "MSadd";
+            this.MSadd.Size = new System.Drawing.Size(104, 22);
+            this.MSadd.Text = "Thêm";
+            this.MSadd.Click += new System.EventHandler(this.MSadd_Click_1);
             // 
-            // menuStrip2
+            // MSsave
             // 
-            this.menuStrip2.Location = new System.Drawing.Point(3, 19);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(125, 24);
-            this.menuStrip2.TabIndex = 1;
-            this.menuStrip2.Text = "menuStrip2";
+            this.MSsave.Name = "MSsave";
+            this.MSsave.Size = new System.Drawing.Size(104, 22);
+            this.MSsave.Text = "Lưu";
+            this.MSsave.Click += new System.EventHandler(this.MSsave_Click);
             // 
-            // btnsave
+            // btnreset
             // 
-            this.btnsave.Location = new System.Drawing.Point(14, 87);
-            this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(111, 23);
-            this.btnsave.TabIndex = 19;
-            this.btnsave.Text = "Lưu";
-            this.btnsave.UseVisualStyleBackColor = true;
-            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
+            this.btnreset.Location = new System.Drawing.Point(622, 85);
+            this.btnreset.Name = "btnreset";
+            this.btnreset.Size = new System.Drawing.Size(75, 23);
+            this.btnreset.TabIndex = 24;
+            this.btnreset.Text = "Reset";
+            this.btnreset.UseVisualStyleBackColor = true;
+            this.btnreset.Click += new System.EventHandler(this.btnreset_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1025, 552);
+            this.Controls.Add(this.btnreset);
             this.Controls.Add(this.rdclass);
             this.Controls.Add(this.rdcode);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtfindcode);
             this.Controls.Add(this.btnfindcode);
             this.Controls.Add(this.label1);
@@ -233,8 +229,8 @@ namespace ManageStudent
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,9 +252,9 @@ namespace ManageStudent
         private System.Windows.Forms.RadioButton rdcode;
         private System.Windows.Forms.RadioButton rdclass;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.Button btnaddstudent;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.Button btnsave;
+        private System.Windows.Forms.ToolStripMenuItem MScontrol;
+        private System.Windows.Forms.ToolStripMenuItem MSadd;
+        private System.Windows.Forms.ToolStripMenuItem MSsave;
+        private System.Windows.Forms.Button btnreset;
     }
 }

@@ -32,11 +32,7 @@ namespace ManageStudent
             dataGridView1.DataSource = bd1;
             dataGridView1.Refresh();
         }
-        private void btnaddstudent_Click(object sender, EventArgs e)
-        {
-            Form1 f1 = new Form1(bd1);
-            f1.Show();
-        }
+      
         private void Form2_click(object sender, EventArgs e)
         {
             Form1 f1= new Form1(bd1);
@@ -67,12 +63,13 @@ namespace ManageStudent
                 {
                     l2.Add(n);
                 }
+               
             }
-            dataGridView1.DataSource = l2;
-            dataGridView1.Refresh();
         }
 
-        private void btnsave_Click(object sender, EventArgs e)
+
+
+        private void MSsave_Click(object sender, EventArgs e)
         {
             bool result = Query.writeFile("Student.dat");
             if (result == true)
@@ -83,6 +80,17 @@ namespace ManageStudent
             {
                 MessageBox.Show("Lưu file thất bại");
             }
+        }
+
+        private void MSadd_Click_1(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1(bd1);
+            f1.Show();
+        }
+
+        private void btnreset_Click(object sender, EventArgs e)
+        {
+            showStudent();
         }
     }
 }
