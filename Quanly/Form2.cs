@@ -55,16 +55,16 @@ namespace ManageStudent
             String word = txtfindcode.Text;
             foreach (Student n in process.getStudent())
             {
-                if (String.Compare(word,n.Code) ==0 && rdcode.Checked)
+                if (String.Compare(word,n.Code) ==0 )
                 {
                     l2.Add(n);
                 }
-                if(String.Compare(word,n.Class)==0 && rdclass.Checked)
+                if(String.Compare(word,n.Class)==0 && rdclass.Checked == true)
                 {
                     l2.Add(n);
                 }
-               
             }
+            dataGridView1.DataSource = l2;
         }
 
 
