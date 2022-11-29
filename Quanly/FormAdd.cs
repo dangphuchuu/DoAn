@@ -13,11 +13,11 @@ using System.Windows.Forms;
 
 namespace Quanly
 {
-    public partial class Form1 : Form
+    public partial class FormAdd : Form
     {
         public BindingSource form1bs;
         private Processing process;
-        public Form1(BindingSource bs)
+        public FormAdd(BindingSource bs)
         {
             
             InitializeComponent();
@@ -46,7 +46,7 @@ namespace Quanly
             }
             if (string.IsNullOrWhiteSpace(txtclass.Text))
             {
-                MessageBox.Show("Chưa nhập tên sinh viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Chưa nhập lớp sinh viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtclass.Focus();
                 return false;
             }

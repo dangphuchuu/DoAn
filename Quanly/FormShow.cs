@@ -11,11 +11,11 @@ using System.Windows.Forms;
 namespace ManageStudent
 {
     
-    public partial class Form2 : Form
+    public partial class FormShow : Form
     {
         private Processing process;
         public BindingSource bd1;
-        public Form2()
+        public FormShow()
         {
             InitializeComponent();
         }
@@ -35,7 +35,8 @@ namespace ManageStudent
       
         private void Form2_click(object sender, EventArgs e)
         {
-            Form1 f1= new Form1(bd1);
+            FormAdd f1= new FormAdd(bd1);
+            f1.txtcode.Visible = false;
             f1.txtcode.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             f1.txtlast.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             f1.txtfirst.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
@@ -84,7 +85,7 @@ namespace ManageStudent
 
         private void MSadd_Click_1(object sender, EventArgs e)
         {
-            Form1 f1 = new Form1(bd1);
+            FormAdd f1 = new FormAdd(bd1);
             f1.Show();
         }
 

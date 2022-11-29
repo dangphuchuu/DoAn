@@ -1,7 +1,7 @@
 ﻿
 namespace Quanly
 {
-    partial class Form1
+    partial class FormAdd
     {
         /// <summary>
         ///  Required designer variable.
@@ -213,7 +213,7 @@ namespace Quanly
             this.btnadd.UseVisualStyleBackColor = true;
             this.btnadd.Click += new System.EventHandler(this.btnthem_Click);
             // 
-            // Form1
+            // FormAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -236,8 +236,8 @@ namespace Quanly
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormAdd";
+            this.Text = "FormAddStudent";
             this.ResumeLayout(false);
             this.PerformLayout();
 

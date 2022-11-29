@@ -1,7 +1,7 @@
 ﻿
 namespace ManageStudent
 {
-    partial class Form2
+    partial class FormShow
     {
         /// <summary>
         /// Required designer variable.
@@ -190,15 +190,15 @@ namespace ManageStudent
             // MSadd
             // 
             this.MSadd.Name = "MSadd";
-            this.MSadd.Size = new System.Drawing.Size(104, 22);
-            this.MSadd.Text = "Thêm";
+            this.MSadd.Size = new System.Drawing.Size(180, 22);
+            this.MSadd.Text = "Thêm Sinh Viên";
             this.MSadd.Click += new System.EventHandler(this.MSadd_Click_1);
             // 
             // MSsave
             // 
             this.MSsave.Name = "MSsave";
-            this.MSsave.Size = new System.Drawing.Size(104, 22);
-            this.MSsave.Text = "Lưu";
+            this.MSsave.Size = new System.Drawing.Size(180, 22);
+            this.MSsave.Text = "Lưu Sinh Viên";
             this.MSsave.Click += new System.EventHandler(this.MSsave_Click);
             // 
             // btnreset
@@ -211,7 +211,7 @@ namespace ManageStudent
             this.btnreset.UseVisualStyleBackColor = true;
             this.btnreset.Click += new System.EventHandler(this.btnreset_Click);
             // 
-            // Form2
+            // FormShow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -225,8 +225,8 @@ namespace ManageStudent
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Name = "FormShow";
+            this.Text = "FormShowStudent";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);

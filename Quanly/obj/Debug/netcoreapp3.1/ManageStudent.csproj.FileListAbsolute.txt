@@ -36,8 +36,6 @@ C:\Users\Administrator\Desktop\DoAn\Quanly\bin\Debug\netcoreapp3.1\ManageStudent
 C:\Users\Administrator\Desktop\DoAn\Quanly\bin\Debug\netcoreapp3.1\ManageStudent.dll
 C:\Users\Administrator\Desktop\DoAn\Quanly\bin\Debug\netcoreapp3.1\ManageStudent.pdb
 C:\Users\Administrator\Desktop\DoAn\Quanly\obj\Debug\netcoreapp3.1\ManageStudent.csproj.AssemblyReference.cache
-C:\Users\Administrator\Desktop\DoAn\Quanly\obj\Debug\netcoreapp3.1\Quanly.Form1.resources
-C:\Users\Administrator\Desktop\DoAn\Quanly\obj\Debug\netcoreapp3.1\ManageStudent.Form2.resources
 C:\Users\Administrator\Desktop\DoAn\Quanly\obj\Debug\netcoreapp3.1\ManageStudent.csproj.GenerateResource.cache
 C:\Users\Administrator\Desktop\DoAn\Quanly\obj\Debug\netcoreapp3.1\ManageStudent.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Administrator\Desktop\DoAn\Quanly\obj\Debug\netcoreapp3.1\ManageStudent.AssemblyInfoInputs.cache
@@ -46,3 +44,5 @@ C:\Users\Administrator\Desktop\DoAn\Quanly\obj\Debug\netcoreapp3.1\ManageStudent
 C:\Users\Administrator\Desktop\DoAn\Quanly\obj\Debug\netcoreapp3.1\ManageStudent.dll
 C:\Users\Administrator\Desktop\DoAn\Quanly\obj\Debug\netcoreapp3.1\ManageStudent.pdb
 C:\Users\Administrator\Desktop\DoAn\Quanly\obj\Debug\netcoreapp3.1\ManageStudent.genruntimeconfig.cache
+C:\Users\Administrator\Desktop\DoAn\Quanly\obj\Debug\netcoreapp3.1\Quanly.FormAdd.resources
+C:\Users\Administrator\Desktop\DoAn\Quanly\obj\Debug\netcoreapp3.1\ManageStudent.FormShow.resources
